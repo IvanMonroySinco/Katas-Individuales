@@ -14,18 +14,28 @@ public class ArañasTest
         //Assert
         mapa.Posiciones.Count.Should().Be(21);
     }
+
+    [Fact]
+    public void ElMapa_Debe_ContenerPosicionP0()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        
+        //Assert
+        mapa.Posiciones.Should().Contain("P0");
+    }
     
 } 
 
 public class Mapa
 {
-    public List<int> Posiciones { get; set; } = [];
+    public List<string> Posiciones { get; set; } = [];
 
     public Mapa()
     {
         for (int i = 0; i <= 20; i++)
         {
-            Posiciones.Add(i);
+            Posiciones.Add(i.ToString());
         }
     }
 }
