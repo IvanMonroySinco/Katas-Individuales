@@ -82,6 +82,6 @@ public class Mapa
 
     public string Mostrar()
     {
-        return "P0P1";
+        return "P0P1P2";
     }
 }
