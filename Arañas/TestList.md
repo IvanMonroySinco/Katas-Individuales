@@ -1,5 +1,5 @@
-[] ElMapa_Debe_TenerVeintiunaPosiciones
-[] ElMapa_Debe_ContenerPosicionP0
+[x] ElMapa_Debe_TenerVeintiunaPosiciones
+[x] ElMapa_Debe_ContenerPosicionP0
 [] ElMapa_Debe_ContenerPosicionP1
 [] ElMapa_Debe_ContenerPosicionP2
 [] ElMapa_Debe_ContenerPosicionP20
