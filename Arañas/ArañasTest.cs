@@ -54,8 +54,9 @@ public class Mapa
     {
         Posiciones.Add("P0");
         Posiciones.Add("P1");
+        Posiciones.Add("P2");
         
-        for (int i = 0; i <= 18; i++)
+        for (int i = 0; i <= 17; i++)
         {
             Posiciones.Add(i.ToString());
         }
