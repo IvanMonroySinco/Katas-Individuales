@@ -14,35 +14,18 @@ public class ArañasTest
         //Assert
         mapa.Posiciones.Count.Should().Be(21);
     }
-
-    [Fact]
-    public void ElMapa_Debe_ContenerPosicionP0()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        
-        //Assert
-        mapa.Posiciones.Should().Contain("P0");
-    }
     
-    [Fact]
-    public void ElMapa_Debe_ContenerPosicionP1()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        
-        //Assert
-        mapa.Posiciones.Should().Contain("P1");
-    }
     
-    [Fact]
-    public void ElMapa_Debe_ContenerPosicionP2()
+    [Theory]
+    [InlineData("P0"), InlineData("P1"), InlineData("P2")]
+    [InlineData("P5"), InlineData("P10"), InlineData("P15"), InlineData("P20")]
+    public void ElMapa_Debe_ContenerVeintiunaPosicionesDesdeElCeroAlVeinteIdentificadasConLaLetraPYElNumeroEnteroCorrespondiente(string posicion)
     {
         //Arrange
         var mapa = new Mapa();
         
         //Assert
-        mapa.Posiciones.Should().Contain("P2");
+        mapa.Posiciones.Should().Contain(posicion);
     }
 } 
 
@@ -52,13 +35,9 @@ public class Mapa
 
     public Mapa()
     {
-        Posiciones.Add("P0");
-        Posiciones.Add("P1");
-        Posiciones.Add("P2");
-        
-        for (int i = 0; i <= 17; i++)
+        for (int i = 0; i <= 20; i++)
         {
-            Posiciones.Add(i.ToString());
+            Posiciones.Add($"P{i}");
         }
     }
 }
