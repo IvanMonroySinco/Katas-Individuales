@@ -53,6 +53,19 @@ public class ArañasTest
         //Assert
         resultado.Should().Contain("P1");
     }
+    
+    [Fact]
+    public void ElMapa_Debe_MostrarP2()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().Contain("P2");
+    }
 } 
 
 public class Mapa
