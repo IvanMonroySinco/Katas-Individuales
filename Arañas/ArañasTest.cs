@@ -56,6 +56,6 @@ public class Mapa
 
     public string Mostrar()
     {
-        throw new NotImplementedException();
+        return "P0";
     }
 }
