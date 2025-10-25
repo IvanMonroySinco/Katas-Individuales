@@ -33,7 +33,8 @@ public class Mapa
 
     public Mapa()
     {
-        for (int i = 0; i <= 20; i++)
+        Posiciones.Add("P0");
+        for (int i = 0; i <= 19; i++)
         {
             Posiciones.Add(i.ToString());
         }
