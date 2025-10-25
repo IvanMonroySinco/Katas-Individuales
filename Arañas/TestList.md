@@ -5,8 +5,19 @@
 
 [x] ElMapa_Debe_ContenerVeintiunaPosicionesDesdeElCeroAlVeinteIdentificadasConLaLetraPYElNumeroEnteroCorrespondiente
 
+[] ElMapa_Debe_MostrarP0
+[] ElMapa_Debe_MostrarP1
+[] ElMapa_Debe_MostrarP2
+
 [] ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente
-[] ElMapa_Debe_MostrarConLineasLasConexionesEntrePosiciones
+
+
+[] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1
+[] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP4
+
+[] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreCadaPosicion
+
+
 
 [] PosicionP0_Debe_EstarConectadoConPosicionP1
 [] PosicionP0_Debe_EstarConectadoConPosicionP4

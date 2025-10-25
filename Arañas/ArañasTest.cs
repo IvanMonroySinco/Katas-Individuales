@@ -27,6 +27,19 @@ public class ArañasTest
         //Assert
         mapa.Posiciones.Should().Contain(posicion);
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarP0()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().Contain("P0");
+    }
 } 
 
 public class Mapa
@@ -39,5 +52,10 @@ public class Mapa
         {
             Posiciones.Add($"P{i}");
         }
+    }
+
+    public string Mostrar()
+    {
+        throw new NotImplementedException();
     }
 }
