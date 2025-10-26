@@ -27,22 +27,11 @@ public class ArañasTest
         //Assert
         mapa.Posiciones.Should().Contain(posicion);
     }
-
-    [Fact]
-    public void ElMapa_Debe_MostrarP0()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().Contain("P0");
-    }
     
-    [Fact]
-    public void ElMapa_Debe_MostrarP1()
+    [Theory]
+    [InlineData("P0"), InlineData("P1"), InlineData("P2")]
+    [InlineData("P5"), InlineData("P10"), InlineData("P15"), InlineData("P20")]
+    public void ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente(string posicion)
     {
         //Arrange
         var mapa = new Mapa();
@@ -51,20 +40,7 @@ public class ArañasTest
         var resultado = mapa.Mostrar();
         
         //Assert
-        resultado.Should().Contain("P1");
-    }
-    
-    [Fact]
-    public void ElMapa_Debe_MostrarP2()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().Contain("P2");
+        resultado.Should().Contain(posicion); 
     }
 } 
 
@@ -75,13 +51,16 @@ public class Mapa
     public Mapa()
     {
         for (int i = 0; i <= 20; i++)
-        {
             Posiciones.Add($"P{i}");
-        }
     }
 
     public string Mostrar()
     {
-        return "P0P1P2";
+        string mapa = "";
+        
+        for (int i = 0; i <= 20; i++)
+            mapa += $"P{i}";
+        
+        return mapa;
     }
 }

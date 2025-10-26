@@ -5,11 +5,11 @@
 
 [x] ElMapa_Debe_ContenerVeintiunaPosicionesDesdeElCeroAlVeinteIdentificadasConLaLetraPYElNumeroEnteroCorrespondiente
 
-[] ElMapa_Debe_MostrarP0
-[] ElMapa_Debe_MostrarP1
-[] ElMapa_Debe_MostrarP2
+[X] ElMapa_Debe_MostrarP0
+[X] ElMapa_Debe_MostrarP1
+[X] ElMapa_Debe_MostrarP2
 
-[] ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente
+[x] ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente
 
 
 [] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1
