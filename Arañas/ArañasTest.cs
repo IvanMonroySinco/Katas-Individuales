@@ -73,7 +73,20 @@ public class ArañasTest
         //Assert
         resultado.Should().NotContain(conexion); 
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Count(c => c == '|').Should().Be(1);
+    }
 } 
+
 
 public class Mapa
 {
