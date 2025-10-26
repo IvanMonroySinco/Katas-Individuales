@@ -67,6 +67,18 @@ public class ArañasTest
         //Assert
         resultado.Should().Contain("P1 ── P2"); 
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP6YP7()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().Contain("P6 ── P7"); 
+    }
     
 } 
 
