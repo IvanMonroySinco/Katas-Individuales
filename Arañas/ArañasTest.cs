@@ -44,7 +44,7 @@ public class ArañasTest
     }
 
     [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1()
+    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP0YP1()
     {
         //Arrange
         var mapa = new Mapa();
@@ -53,8 +53,9 @@ public class ArañasTest
         var resultado = mapa.Mostrar();
         
         //Assert
-        resultado.Should().Contain("P0 ─── P1"); 
+        resultado.Should().Contain("P0 ── P1"); 
     }
+    
 } 
 
 public class Mapa
@@ -69,7 +70,7 @@ public class Mapa
 
     public string Mostrar()
     {
-        string mapa = "P0 ─── P1";
+        string mapa = "P0 ── P1";
         
         for (int i = 0; i <= 20; i++)
             mapa += $"P{i}";
