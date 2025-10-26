@@ -18,7 +18,7 @@
 [x] ElMapa_Debe_MostrarConUnaLineaHorizontalLasConexionesHorizontales
 
 [x] PosicionP3_NoDebe_MostrarPosicionesASuDerecha
-[] PosicionP7_NoDebe_MostrarPosicionesASuDerecha
+[x] PosicionP7_NoDebe_MostrarPosicionesASuDerecha
 [] PosicionP16_NoDebe_MostrarPosicionesASuDerecha
 
 

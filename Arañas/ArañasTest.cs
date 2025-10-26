@@ -102,7 +102,7 @@ public class Mapa
         for (int i = 0; i <= 20; i++)
         {
             mapa += $"P{i} ── ";
-            if (i == 3)
+            if (i == 3 || i == 7)
             {
                 mapa += @"
 ";
