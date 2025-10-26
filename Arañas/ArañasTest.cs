@@ -42,6 +42,19 @@ public class ArañasTest
         //Assert
         resultado.Should().Contain(posicion); 
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().Contain("P0 ─── P1"); 
+    }
 } 
 
 public class Mapa
