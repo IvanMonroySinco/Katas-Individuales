@@ -94,7 +94,7 @@ public class Mapa
 
     public string Mostrar()
     {
-        string mapa = "P0 ── P1 ── P2";
+        string mapa = "P0 ── P1 ── P2 P6 ── P7";
         
         for (int i = 0; i <= 20; i++)
             mapa += $"P{i}";
