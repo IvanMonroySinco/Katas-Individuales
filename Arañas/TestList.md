@@ -24,7 +24,7 @@
 [x] El_Mapa_DebeMostrarSaltoDeLineaCuandoPosicionNoTieneConexionALaDerecha
 
 
-[] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
+[x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP4YP9
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP16YP20
 
