@@ -59,6 +59,17 @@ public class ArañasTest
         resultado.Should().Contain(conexion); 
     }
     
+    [Fact]
+    public void PosicionP3_NoDebe_MostrarPosicionesASuDerecha()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().NotContain("P3 ── P"); 
+    }
     
 } 
 
