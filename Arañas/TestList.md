@@ -12,7 +12,7 @@
 [x] ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente
 
 
-[] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1
+[x] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP1
 [] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreP0YP4
 
 [] ElMapa_Debe_MostrarConUnaLineaLaConexionEntreCadaPosicion
