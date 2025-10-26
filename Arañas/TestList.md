@@ -26,9 +26,9 @@
 
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP4YP9
-[] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP16YP20
+[] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP9YP13
 
-[] ElMapa_Debe_MostrarConUnaLineaVerticalesLasConexionesVerticales
+[] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
 
 
 

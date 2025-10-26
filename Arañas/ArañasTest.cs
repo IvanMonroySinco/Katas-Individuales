@@ -97,6 +97,18 @@ public class ArañasTest
         //Assert
         resultado.Count(c => c == '|').Should().BeGreaterThanOrEqualTo(2);
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP9YP13()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Count(c => c == '|').Should().BeGreaterThanOrEqualTo(3);
+    }
 } 
 
 
