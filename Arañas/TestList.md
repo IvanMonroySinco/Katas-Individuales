@@ -19,9 +19,9 @@
 
 [x] PosicionP3_NoDebe_MostrarPosicionesASuDerecha
 [x] PosicionP7_NoDebe_MostrarPosicionesASuDerecha
-[] PosicionP16_NoDebe_MostrarPosicionesASuDerecha
+[x] PosicionP16_NoDebe_MostrarPosicionesASuDerecha
 
-
+[] El_Mapa_DebeMostrarSaltoDeLineaCuandoPosicionNoTieneConexionALaDerecha
 
 
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
