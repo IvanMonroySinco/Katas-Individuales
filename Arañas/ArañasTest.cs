@@ -100,7 +100,7 @@ public class Mapa
 
     public string Mostrar()
     {
-        string mapa = "";
+        string mapa = "|";
 
         for (int i = 0; i <= 20; i++)
         {
