@@ -70,6 +70,18 @@ public class ArañasTest
         //Assert
         resultado.Should().NotContain("P3 ── P"); 
     }
+
+    [Fact]
+    public void PosicionP7_NoDebe_MostrarPosicionesASuDerecha()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.Mostrar();
+        
+        //Assert
+        resultado.Should().NotContain("P7 ── P"); 
+    }
     
 } 
 
