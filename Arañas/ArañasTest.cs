@@ -59,20 +59,11 @@ public class ArañasTest
         resultado.Should().Contain(conexion); 
     }
     
-    [Fact]
-    public void PosicionP3_NoDebe_MostrarPosicionesASuDerecha()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().NotContain("P3 ── P"); 
-    }
 
-    [Fact]
-    public void PosicionP7_NoDebe_MostrarPosicionesASuDerecha()
+    [Theory]
+    [InlineData("P3 ── P"), InlineData("P7 ── P"), InlineData("P16 ── P"),
+    InlineData("P12 ── P"), InlineData("P20 ── P")]
+    public void El_Mapa_DebeMostrarSaltoDeLineaCuandoPosicionNoTieneConexionALaDerecha(string conexion)
     {
         //Arrange
         var mapa = new Mapa();
@@ -80,21 +71,8 @@ public class ArañasTest
         var resultado = mapa.Mostrar();
         
         //Assert
-        resultado.Should().NotContain("P7 ── P"); 
+        resultado.Should().NotContain(conexion); 
     }
-    
-    [Fact]
-    public void PosicionP16_NoDebe_MostrarPosicionesASuDerecha()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().NotContain("P16 ── P"); 
-    }
-    
 } 
 
 public class Mapa
@@ -113,12 +91,11 @@ public class Mapa
 
         for (int i = 0; i <= 20; i++)
         {
-            mapa += $"P{i} ── ";
-            if (i == 3 || i == 7 || i == 16)
-            {
-                mapa += @"
-";
-            }
+            mapa += $"P{i}";
+            if (i == 3 || i == 7 || i == 16 || i == 12 || i == 20)
+                mapa += Environment.NewLine;
+            else
+                mapa += " ── ";
         }
            
         
