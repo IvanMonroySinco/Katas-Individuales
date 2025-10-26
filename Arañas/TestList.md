@@ -13,9 +13,16 @@
 
 [x] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP0YP1
 [x] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP1YP2
-[] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP6YP7
+[X] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP6YP7
 
-[] ElMapa_Debe_MostrarConUnaLineaHorizontalLasConexionesHorizontales
+[x] ElMapa_Debe_MostrarConUnaLineaHorizontalLasConexionesHorizontales
+
+[] PosicionP3_NoDebe_MostrarPosicionesASuDerecha
+[] PosicionP7_NoDebe_MostrarPosicionesASuDerecha
+[] PosicionP16_NoDebe_MostrarPosicionesASuDerecha
+
+
+
 
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4

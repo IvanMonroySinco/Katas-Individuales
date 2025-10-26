@@ -42,43 +42,23 @@ public class ArañasTest
         //Assert
         resultado.Should().Contain(posicion); 
     }
+    
 
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP0YP1()
+    [Theory]
+    [InlineData("P0 ── P1"), InlineData("P1 ── P2"), InlineData("P6 ── P7")]
+    [InlineData("P9 ── P10"), InlineData("P11 ── P12"), InlineData("P17 ── P18")]
+    
+    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLasConexionesHorizontales(string conexion)
     {
         //Arrange
         var mapa = new Mapa();
-        
         //Act
         var resultado = mapa.Mostrar();
         
         //Assert
-        resultado.Should().Contain("P0 ── P1"); 
+        resultado.Should().Contain(conexion); 
     }
     
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP1YP2()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().Contain("P1 ── P2"); 
-    }
-
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP6YP7()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-        
-        //Assert
-        resultado.Should().Contain("P6 ── P7"); 
-    }
     
 } 
 
@@ -94,10 +74,10 @@ public class Mapa
 
     public string Mostrar()
     {
-        string mapa = "P0 ── P1 ── P2 P6 ── P7";
+        string mapa = "";
         
         for (int i = 0; i <= 20; i++)
-            mapa += $"P{i}";
+            mapa += $"P{i} ── ";
         
         return mapa;
     }
