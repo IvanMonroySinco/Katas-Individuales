@@ -127,6 +127,19 @@ public class ArañasTest
         //Assert
         resultado.Should().Be(@"\");
     }
+
+    [Theory]
+    [InlineData("P0", "/"), InlineData("P4", "/"), InlineData("P13", @"\"), InlineData("P17", @"\")]
+    public void ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8(string posicion, string lineaEsperada)
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.MostrarLineaConexionDiagonal(posicion);
+
+        //Assert
+        resultado.Should().Be(lineaEsperada);
+    }
     
 }
 
@@ -174,8 +187,11 @@ public class Mapa
 
     public object MostrarLineaConexionDiagonal(string p0)
     {
-        if (p0 == "P0")
-            return "/"; 
-        return @"\";
+        if (p0 == "P0"|| p0 == "P4")
+            return "/";
+        else if (p0 == "P13" || p0 == "P17")
+            return @"\";
+        else
+            return " ── ";
     }
 }
