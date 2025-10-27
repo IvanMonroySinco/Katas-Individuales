@@ -76,78 +76,32 @@ public class ArañasTest
         resultado.Should().NotContain(conexion);
     }
 
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4()
+    [Theory]
+    [InlineData("P8"), InlineData("P17"), InlineData("P18"), InlineData("P19"), InlineData("P20")]
+    public void ElMapa_NoDebe_MostrarLineaDeConexionVerticalSiNoExisteConexion(string posicion)
     {
         //Arrange
         var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-
-        //Assert
-        resultado.Count(c => c == '|').Should().BeGreaterThanOrEqualTo(1);
-    }
-
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP4YP9ManteniendoLaLineaDeP0YP4()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-
-        //Assert
-        resultado.Count(c => c == '|').Should().BeGreaterThanOrEqualTo(2);
-    }
-
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP9YP13ManteniendoLasLineasDeP0P4YP4P9()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.Mostrar();
-
-        //Assert
-        resultado.Count(c => c == '|').Should().BeGreaterThanOrEqualTo(3);
-    }
-
-    [Fact]
-    public void PosicionP8_NoDebe_MostrarConexionesVerticales()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        var posicion = "P8";
         //Act
         var resultado = mapa.MostrarLineaConexionVertical(posicion);
+
         //Assert
-        resultado.Should().Be(""); 
-    }
-    
-    [Fact]
-    public void PosicionP17_NoDebe_MostrarConexionesVerticales()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        var posicion = "P17";
-        //Act
-        var resultado = mapa.MostrarLineaConexionVertical(posicion);
-        //Assert
-        resultado.Should().Be(""); 
+        resultado.Should().Be("");
     }
 
-    [Fact]
-    public void PosicionP20_NoDebe_MostrarConexionesVerticales()
+
+    [Theory]
+    [InlineData("P0"), InlineData("P4"), InlineData("P9")]
+    public void ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticalesHaciaAbajo(string posicion)
     {
         //Arrange
         var mapa = new Mapa();
-        var posicion = "P20";
         //Act
         var resultado = mapa.MostrarLineaConexionVertical(posicion);
+
         //Assert
-        resultado.Should().Be(""); 
+        resultado.Should().Be("|");
     }
-    
 }
 
 public class Mapa
@@ -162,14 +116,22 @@ public class Mapa
 
     public string Mostrar()
     {
-        string mapa = "|||";
+        string mapa = "";
+        string conexionesVerticales = "";
+
 
         for (int i = 0; i <= 20; i++)
         {
             var posicion = $"P{i}";
+            conexionesVerticales += MostrarLineaConexionVertical(posicion);
             mapa += posicion;
             if (i == 3 || i == 7 || i == 16 || i == 12 || i == 20)
+            {
                 mapa += Environment.NewLine;
+                mapa += conexionesVerticales;
+                mapa += Environment.NewLine;
+                conexionesVerticales = "";
+            }
             else
                 mapa += " ── ";
         }
@@ -180,8 +142,8 @@ public class Mapa
 
     public string MostrarLineaConexionVertical(string posicion)
     {
-        if (posicion == "P8" || posicion == "P17" || posicion == "P20")
+        if (posicion == "P8" || posicion == "P17" || posicion == "P18" || posicion == "P19" || posicion == "P20")
             return "";
-        throw new NotImplementedException();
+        return "|";
     }
 }

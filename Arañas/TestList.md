@@ -30,8 +30,8 @@
 [x] PosicionP17_NoDebe_MostrarConexionesVerticales
 [X] PosicionP20_NoDebe_MostrarConexionesVerticales
 
-[] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
-
+[x] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
+[x] ElMapa_NoDebe_MostrarLineaDeConexionVerticalSiNoExisteConexion
 
 
 
