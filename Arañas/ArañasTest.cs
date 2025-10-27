@@ -115,6 +115,19 @@ public class ArañasTest
         resultado.Should().Be("/");
     }
     
+    
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaAbajoLaConexionEntreP8Y17()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.MostrarLineaConexionDiagonal("P17");
+
+        //Assert
+        resultado.Should().Be(@"\");
+    }
+    
 }
 
 public class Mapa
