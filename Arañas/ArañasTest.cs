@@ -116,6 +116,22 @@ public class ArañasTest
         //Assert
         resultado.Trim().Should().Be(lineaEsperada);
     }
+
+    [Fact]
+    public void PosicionP0_Debe_EstarConectadaConP1()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        var posicionA = "P0";
+        var posicionB = "P1";
+
+        //Act
+        var resultado = mapa.EstanConectados(posicionA, posicionB);
+
+        //Assert
+        resultado.Should().Be(true);
+    }
+    
     
 }
 
@@ -169,5 +185,10 @@ public class Mapa
             return @"\    ";
         else
             return "";
+    }
+
+    public bool EstanConectados(string posicionA, string posicionB)
+    {
+        throw new NotImplementedException();
     }
 }
