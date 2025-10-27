@@ -132,6 +132,20 @@ public class ArañasTest
         resultado.Should().Be(true);
     }
     
+    [Fact]
+    public void PosicionP0_Debe_EstarConectadaConP4()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        var posicionA = "P0";
+        var posicionB = "P4";
+
+        //Act
+        var resultado = mapa.EstanConectados(posicionA, posicionB);
+
+        //Assert
+        resultado.Should().Be(true);
+    }
     
 }
 
