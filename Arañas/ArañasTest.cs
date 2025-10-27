@@ -102,6 +102,19 @@ public class ArañasTest
         //Assert
         resultado.Should().Be("|");
     }
+
+    [Fact]
+    public void ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaArribaLaConexionEntreP8YP0()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        //Act
+        var resultado = mapa.MostrarLineaConexionDiagonal("P0");
+
+        //Assert
+        resultado.Should().Be("/");
+    }
+    
 }
 
 public class Mapa
@@ -145,5 +158,10 @@ public class Mapa
         if (posicion == "P8" || posicion == "P17" || posicion == "P18" || posicion == "P19" || posicion == "P20")
             return "";
         return "|";
+    }
+
+    public object MostrarLineaConexionDiagonal(string p0)
+    {
+        throw new NotImplementedException();
     }
 }

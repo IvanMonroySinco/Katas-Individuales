@@ -33,7 +33,8 @@
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
 [x] ElMapa_NoDebe_MostrarLineaDeConexionVerticalSiNoExisteConexion
 
-
+[] ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaArribaLaConexionEntreP8YP0
+[] ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaAbajoLaConexionEntreP8Y17
 
 
 
