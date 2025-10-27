@@ -162,6 +162,6 @@ public class Mapa
 
     public object MostrarLineaConexionDiagonal(string p0)
     {
-        throw new NotImplementedException();
+        return "/";
     }
 }
