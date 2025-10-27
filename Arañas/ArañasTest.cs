@@ -203,7 +203,7 @@ public class Mapa
 
     public bool EstanConectados(string posicionA, string posicionB)
     {
-        if (posicionA == "P0" && posicionB == "P1")
+        if (posicionA == "P0" && (posicionB == "P1" || posicionB == "P4"))
         {
             return true;
         }
