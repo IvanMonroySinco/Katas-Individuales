@@ -1,42 +1,12 @@
 [x] ElMapa_Debe_TenerVeintiunaPosiciones
-[x] ElMapa_Debe_ContenerPosicionP0
-[x] ElMapa_Debe_ContenerPosicionP1
-[x] ElMapa_Debe_ContenerPosicionP2
-
 [x] ElMapa_Debe_ContenerVeintiunaPosicionesDesdeElCeroAlVeinteIdentificadasConLaLetraPYElNumeroEnteroCorrespondiente
-
-[X] ElMapa_Debe_MostrarP0
-[X] ElMapa_Debe_MostrarP1
-[X] ElMapa_Debe_MostrarP2
-
 [x] ElMapa_Debe_MostrarLasVeintiunaPosicionesIdentificadaConLaLetraPYElNumeroEnteroCorrespondiente
-
-[x] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP0YP1
-[x] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP1YP2
-[X] ElMapa_Debe_MostrarConUnaLineaHorizontalLaConexionEntreP6YP7
-
 [x] ElMapa_Debe_MostrarConUnaLineaHorizontalLasConexionesHorizontales
-
-[x] PosicionP3_NoDebe_MostrarPosicionesASuDerecha
-[x] PosicionP7_NoDebe_MostrarPosicionesASuDerecha
-[x] PosicionP16_NoDebe_MostrarPosicionesASuDerecha
-
 [x] El_Mapa_DebeMostrarSaltoDeLineaCuandoPosicionNoTieneConexionALaDerecha
-
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP0YP4
-[x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP4YP9
-[x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP9YP13
-[x] PosicionP8_NoDebe_MostrarConexionesVerticales
-[x] PosicionP17_NoDebe_MostrarConexionesVerticales
-[X] PosicionP20_NoDebe_MostrarConexionesVerticales
-
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
 [x] ElMapa_NoDebe_MostrarLineaDeConexionVerticalSiNoExisteConexion
-
-[x] ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaArribaLaConexionEntreP8YP0
-[x] ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaAbajoLaConexionEntreP8Y17
-
-
+[x] ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8
 
 
 [] PosicionP0_Debe_EstarConectadoConPosicionP1

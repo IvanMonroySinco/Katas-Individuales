@@ -100,36 +100,12 @@ public class ArañasTest
         var resultado = mapa.MostrarLineaConexionVertical(posicion);
 
         //Assert
-        resultado.Should().Be("|");
-    }
-
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaArribaLaConexionEntreP8YP0()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.MostrarLineaConexionDiagonal("P0");
-
-        //Assert
-        resultado.Should().Be("/");
+        resultado.Trim().Should().Be("|");
     }
     
-    
-    [Fact]
-    public void ElMapa_Debe_MostrarConUnaLineaDiagonalHaciaAbajoLaConexionEntreP8Y17()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        //Act
-        var resultado = mapa.MostrarLineaConexionDiagonal("P17");
-
-        //Assert
-        resultado.Should().Be(@"\");
-    }
 
     [Theory]
-    [InlineData("P0", "/"), InlineData("P4", "/"), InlineData("P13", @"\"), InlineData("P17", @"\")]
+    [InlineData("P0", "/"), InlineData("P4", "/"), InlineData("P13", @"\"), InlineData("P9", @"\")]
     public void ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8(string posicion, string lineaEsperada)
     {
         //Arrange
@@ -138,7 +114,7 @@ public class ArañasTest
         var resultado = mapa.MostrarLineaConexionDiagonal(posicion);
 
         //Assert
-        resultado.Should().Be(lineaEsperada);
+        resultado.Trim().Should().Be(lineaEsperada);
     }
     
 }
@@ -166,7 +142,7 @@ public class Mapa
             if (i == 3 || i == 7 || i == 16 || i == 12 || i == 20)
             {
                 mapa += Environment.NewLine;
-                mapa += MostrarLineaConexionDiagonal(posicion) + conexionesVerticales;
+                mapa += MostrarLineaConexionDiagonal($"P{i - 3}") + conexionesVerticales;
                 mapa += Environment.NewLine;
                 conexionesVerticales = "";
             }
@@ -182,16 +158,16 @@ public class Mapa
     {
         if (posicion == "P8" || posicion == "P17" || posicion == "P18" || posicion == "P19" || posicion == "P20")
             return "";
-        return "|";
+        return "|     ";
     }
 
-    public object MostrarLineaConexionDiagonal(string p0)
+    public string MostrarLineaConexionDiagonal(string p0)
     {
         if (p0 == "P0"|| p0 == "P4")
-            return "/";
-        else if (p0 == "P13" || p0 == "P17")
-            return @"\";
+            return "/     ";
+        if (p0 == "P13" || p0 == "P9")
+            return @"\    ";
         else
-            return " ── ";
+            return "";
     }
 }
