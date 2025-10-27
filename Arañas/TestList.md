@@ -28,7 +28,7 @@
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLaConexionEntreP9YP13
 [x] PosicionP8_NoDebe_MostrarConexionesVerticales
 [x] PosicionP17_NoDebe_MostrarConexionesVerticales
-[] PosicionP20_NoDebe_MostrarConexionesVerticales
+[X] PosicionP20_NoDebe_MostrarConexionesVerticales
 
 [] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
 

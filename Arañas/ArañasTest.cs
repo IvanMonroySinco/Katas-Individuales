@@ -180,7 +180,7 @@ public class Mapa
 
     public string MostrarLineaConexionVertical(string posicion)
     {
-        if (posicion == "P8" || posicion == "P17")
+        if (posicion == "P8" || posicion == "P17" || posicion == "P20")
             return "";
         throw new NotImplementedException();
     }
