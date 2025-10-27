@@ -174,6 +174,8 @@ public class Mapa
 
     public object MostrarLineaConexionDiagonal(string p0)
     {
-        return "/";
+        if (p0 == "P0")
+            return "/"; 
+        return @"\";
     }
 }
