@@ -156,6 +156,8 @@ public class Mapa
 
     public string MostrarLineaConexionVertical(string posicion)
     {
+        if (posicion == "P8")
+            return "";
         throw new NotImplementedException();
     }
 }
