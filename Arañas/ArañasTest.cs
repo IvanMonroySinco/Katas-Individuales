@@ -132,7 +132,6 @@ public class Mapa
         string mapa = "";
         string conexionesVerticales = "";
 
-
         for (int i = 0; i <= 20; i++)
         {
             var posicion = $"P{i}";
@@ -141,7 +140,7 @@ public class Mapa
             if (i == 3 || i == 7 || i == 16 || i == 12 || i == 20)
             {
                 mapa += Environment.NewLine;
-                mapa += conexionesVerticales;
+                mapa += MostrarLineaConexionDiagonal(posicion) + conexionesVerticales;
                 mapa += Environment.NewLine;
                 conexionesVerticales = "";
             }
