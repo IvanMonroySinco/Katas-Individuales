@@ -123,6 +123,18 @@ public class ArañasTest
         //Assert
         resultado.Should().Be(""); 
     }
+    
+    [Fact]
+    public void Posicion17_NoDebe_MostrarConexionesVerticales()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        var posicion = "P17";
+        //Act
+        var resultado = mapa.MostrarLineaConexionVertical(posicion);
+        //Assert
+        resultado.Should().Be(""); 
+    }
 
 }
 
