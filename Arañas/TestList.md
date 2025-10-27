@@ -9,7 +9,7 @@
 [x] ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8
 
 
-[] PosicionP0_Debe_EstarConectadoConPosicionP1
+[x] PosicionP0_Debe_EstarConectadoConPosicionP1
 [] PosicionP0_Debe_EstarConectadoConPosicionP4
 [] PosicionP0_Deber_EstarConectadoConPosicionP8
 [] PosicionP19_Debe_EstarConectadoConPosicionP20
