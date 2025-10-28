@@ -14,7 +14,7 @@
 [x] PosicionP0_Deber_EstarConectadoConPosicionP8
 [x] PosicionP19_Debe_EstarConectadoConPosicionP20
 
-[] CadaPosicion_Debe_TenerAlMenosUnaConexion
+[X] CadaPosicion_Debe_TenerAlMenosUnaConexion
 
 Diccionario:
 Posicion: Nodo del mapa donde se desplazaran las arañas del juego(Se identifican con un número entero, del 0 al 20)

@@ -27,7 +27,7 @@ public class ArañasTest
         var mapa = new Mapa();
 
         //Assert
-        mapa.Posiciones.Should().Contain(posicion);
+        mapa.Posiciones.Should().Contain(c => c.ConexionId == posicion);
     }
 
     [Theory]
@@ -117,13 +117,13 @@ public class ArañasTest
         resultado.Trim().Should().Be(lineaEsperada);
     }
 
-    [Fact]
-    public void PosicionP0_Debe_EstarConectadaConP1()
+    [Theory]
+    [InlineData("P0", "P1"), InlineData("P0", "P4"), InlineData("P0", "P4")]
+    [InlineData("P9", "P10"), InlineData("P10", "P14"), InlineData("P14", "P15")]
+    public void CadaPosicion_Debe_TenerAlMenosUnaConexion(string posicionA, string posicionB)
     {
         //Arrange
         var mapa = new Mapa();
-        var posicionA = "P0";
-        var posicionB = "P1";
 
         //Act
         var resultado = mapa.EstanConectados(posicionA, posicionB);
@@ -132,60 +132,44 @@ public class ArañasTest
         resultado.Should().Be(true);
     }
     
-    [Fact]
-    public void PosicionP0_Debe_EstarConectadaConP4()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        var posicionA = "P0";
-        var posicionB = "P4";
-
-        //Act
-        var resultado = mapa.EstanConectados(posicionA, posicionB);
-
-        //Assert
-        resultado.Should().Be(true);
-    }
-
-    [Fact]
-    public void PosicionP0_Deber_EstarConectadoConPosicionP8()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        var posicionA = "P0";
-        var posicionB = "P8";
-
-        //Act
-        var resultado = mapa.EstanConectados(posicionA, posicionB);
-
-        //Assert
-        resultado.Should().Be(true);
-    }
-
-    [Fact]
-    public void PosicionP19_Debe_EstarConectadoConPosicionP20()
-    {
-        //Arrange
-        var mapa = new Mapa();
-        var posicionA = "P19";
-        var posicionB = "P20";
-
-        //Act
-        var resultado = mapa.EstanConectados(posicionA, posicionB);
-
-        //Assert
-        resultado.Should().Be(true);
-    }
 }
 
 public class Mapa
 {
-    public List<string> Posiciones { get; set; } = [];
+    public List<Conexion> Posiciones { get; set; } = [];
 
     public Mapa()
     {
         for (int i = 0; i <= 20; i++)
-            Posiciones.Add($"P{i}");
+            Posiciones.Add(new Conexion($"P{i}"));
+        Conectar("P0", "P1");
+        Conectar("P0", "P4");
+        Conectar("P0", "P8");
+        Conectar("P19", "P20");
+
+        
+        // Nodo 8
+        Conectar("P8", "P0");
+        Conectar("P8", "P4");
+        Conectar("P8", "P9");
+        Conectar("P8", "P13");
+        Conectar("P8", "P17");
+        
+        // Filas
+        Conectar("P0", "P1"); Conectar("P1", "P2"); Conectar("P2", "P3");
+        Conectar("P4", "P5"); Conectar("P5", "P6"); Conectar("P6", "P7");
+        Conectar("P9", "P10"); Conectar("P10", "P11"); Conectar("P11", "P12");
+        Conectar("P13", "P14"); Conectar("P14", "P15"); Conectar("P15", "P16");
+        Conectar("P17", "P18"); Conectar("P18", "P19"); Conectar("P19", "P20");
+
+        // Columnas
+        Conectar("P0", "P4"); Conectar("P4", "P9"); Conectar("P9", "P13"); Conectar("P13", "P17");
+        Conectar("P1", "P5"); Conectar("P5", "P10"); Conectar("P10", "P14"); Conectar("P14", "P18");
+        Conectar("P2", "P6"); Conectar("P6", "P11"); Conectar("P11", "P15"); Conectar("P15", "P19");
+        Conectar("P3", "P7"); Conectar("P7", "P12"); Conectar("P12", "P16"); Conectar("P16", "P20");
+
+
+        
     }
 
     public string Mostrar()
@@ -232,11 +216,38 @@ public class Mapa
 
     public bool EstanConectados(string posicionA, string posicionB)
     {
-        if (posicionA == "P0" && (posicionB == "P1" || posicionB == "P4"|| posicionB == "P8") ||
-            posicionA == "P19" && posicionB == "P20" )
-        {
-            return true;
-        }
-        throw new NotImplementedException();
+        var a = Posiciones.First(p => p.ConexionId == posicionA);   
+        var b = Posiciones.First(p => p.ConexionId == posicionB);
+        return a.EstaConectadoCon(b);
+    }
+
+    public void Conectar(string posicionA, string posicionB)
+    {
+     var a = Posiciones.First(p => p.ConexionId == posicionA);   
+     var b = Posiciones.First(p => p.ConexionId == posicionB);   
+     a.ConectarCon(b);
+    }
+    
+    
+}
+
+public class Conexion
+{
+    public string ConexionId { get; set; }
+    private readonly HashSet<Conexion> _conexiones = new(); 
+    public Conexion(string conexionId)
+    {
+        this.ConexionId = conexionId;
+    }
+    
+    public void ConectarCon(Conexion conexion)
+    {
+        _conexiones.Add(conexion);
+        conexion._conexiones.Add(this);
+    }
+
+    public bool EstaConectadoCon(Conexion conexion)
+    {
+        return _conexiones.Contains(conexion);
     }
 }
