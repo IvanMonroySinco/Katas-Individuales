@@ -131,7 +131,30 @@ public class ArañasTest
         //Assert
         resultado.Should().Be(true);
     }
-    
+
+    [Fact]
+    public void LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada()
+    {
+        //Arrange
+        var mapa = new Mapa();
+        
+        //Act
+        var araña = new Araña(mapa,0);
+
+        //Assert
+        araña.Posicion.Should().Be(0);
+    }
+     
+}
+
+public class Araña
+{ 
+    public int Posicion { get; set; }
+
+    public Araña(Mapa mapa, int i)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Mapa

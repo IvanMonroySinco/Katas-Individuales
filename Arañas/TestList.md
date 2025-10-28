@@ -7,14 +7,10 @@
 [x] ElMapa_Debe_MostrarConUnaLineaVerticalLasConexionesVerticales
 [x] ElMapa_NoDebe_MostrarLineaDeConexionVerticalSiNoExisteConexion
 [x] ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8
-
-
-[x] PosicionP0_Debe_EstarConectadoConPosicionP1
-[x] PosicionP0_Debe_EstarConectadoConPosicionP4
-[x] PosicionP0_Deber_EstarConectadoConPosicionP8
-[x] PosicionP19_Debe_EstarConectadoConPosicionP20
-
 [X] CadaPosicion_Debe_TenerAlMenosUnaConexion
+
+[] LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada 
+
 
 Diccionario:
 Posicion: Nodo del mapa donde se desplazaran las arañas del juego(Se identifican con un número entero, del 0 al 20)
