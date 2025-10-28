@@ -132,17 +132,23 @@ public class ArañasTest
         resultado.Should().Be(true);
     }
 
-    [Fact]
-    public void LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(5)]
+    [InlineData(8)]
+    [InlineData(15)]
+    
+    
+    public void LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada(int posicion)
     {
         //Arrange
         var mapa = new Mapa();
         
         //Act
-        var araña = new Araña(mapa,0);
+        var araña = new Araña(mapa,posicion);
 
         //Assert
-        araña.Posicion.Should().Be(0);
+        araña.Posicion.Should().Be(posicion);
     }
     
     
@@ -152,9 +158,9 @@ public class Araña
 { 
     public int Posicion { get; set; }
 
-    public Araña(Mapa mapa, int i)
+    public Araña(Mapa mapa, int posicion)
     {
-        Posicion = 0;
+        Posicion = posicion;
     }
 }
 
