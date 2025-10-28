@@ -12,7 +12,7 @@
 [x] PosicionP0_Debe_EstarConectadoConPosicionP1
 [x] PosicionP0_Debe_EstarConectadoConPosicionP4
 [x] PosicionP0_Deber_EstarConectadoConPosicionP8
-[] PosicionP19_Debe_EstarConectadoConPosicionP20
+[x] PosicionP19_Debe_EstarConectadoConPosicionP20
 
 [] CadaPosicion_Debe_TenerAlMenosUnaConexion
 
