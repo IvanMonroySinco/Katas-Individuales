@@ -144,7 +144,8 @@ public class ArañasTest
         //Assert
         araña.Posicion.Should().Be(0);
     }
-     
+    
+    
 }
 
 public class Araña
@@ -153,7 +154,7 @@ public class Araña
 
     public Araña(Mapa mapa, int i)
     {
-        throw new NotImplementedException();
+        Posicion = 0;
     }
 }
 

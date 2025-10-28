@@ -9,7 +9,7 @@
 [x] ElMapa_Debe_MostrarLineasDeConexionDiagonalesDeP8
 [X] CadaPosicion_Debe_TenerAlMenosUnaConexion
 
-[] LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada 
+[x] LaAraña_Debe_IniciarEnElMapaConUnaPosicionDada 
 
 
 Diccionario:
